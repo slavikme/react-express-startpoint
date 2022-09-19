@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  config:
+    image: useparagon/ts-node
+    volumes:
+      - ./config/generateFilesFromTemplates.ts:/app/generateFilesFromTemplates.ts
+      - ./config/lib:/app/lib
+      - ./db:/app/db
+      - ./api:/app/api
+    command: ts-node generateFilesFromTemplates.ts ./db ./api
+    working_dir: /app

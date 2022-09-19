@@ -1,0 +1,26 @@
+{
+  "include": ["src/*.ts"],
+
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
+    "target": "es2017",
+    "module": "commonjs",
+    "sourceMap": true,
+
+    "strict": true,
+
+    "esModuleInterop": true,
+
+//    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "typeRoots": ["./node_modules/@types", "./src/types"]
+  },
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts",
+    "jest.config.ts",
+    "node_modules"
+  ]
+}
