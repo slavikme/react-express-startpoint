@@ -4,7 +4,7 @@ WORKDIR /app
 COPY ./package*.json ./
 RUN npm i
 COPY . .
-CMD ["npm", "run", "build"]
+RUN npm run build
 
 FROM nginx:1-alpine
 EXPOSE 3000
